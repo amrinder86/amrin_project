@@ -10,7 +10,9 @@ gem 'sinatra-contrib'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
+gem 'rack'
 gem 'rake'
+
 
 gem 'bcrypt'
 gem 'shotgun'
@@ -18,6 +20,8 @@ gem 'pry'
 gem 'awesome_print'
 
 gem 'faker'
+gem 'twitter'
+gem 'hashie'
 
 group :test do
   gem 'shoulda-matchers'

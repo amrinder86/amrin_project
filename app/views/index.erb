@@ -1,2 +1,53 @@
-<h1>HOME PAGE...</h1>
-<h1>HELLO WORLD</h1>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+  <div id="main">
+<h1 align="center">Twitter App that shows Customized Tweets</h1>
+  <h2>Live Twitter Feed</h2>
+
+<div class="tweet-info">
+ <% twitter_call.each do |tweet| %>
+ <%="******************************************************" %>
+<%= tweet[:text] %>
+<br>
+<%="*******************************************************" %>
+<% end %>
+</div>
+
+<button id="button1"><a href="https://twitter.com/amringrewal"></a>Follow me</button>
+
+<button id="button2">Recent stuff</button>
+<button id="button3">Not Decided</button>
+
+
+
+    <h3>Mapping THE WORLD!!!!!</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<%=ENV["GOOGLE_KEY"]%>&callback=initMap">
+    </script>
+  </body>
+
+</html>
