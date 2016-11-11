@@ -12,7 +12,7 @@ helpers do
   def twitter_call
     start_client
     @collection = []
-    topics = ["AAPL"]
+    topics = ["hilary"]
     @client.filter(track: topics.join(",")) do |object|
       @collection << object.to_h if object.is_a?(Twitter::Tweet)
       if @collection.length == 1
