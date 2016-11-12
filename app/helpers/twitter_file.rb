@@ -20,7 +20,7 @@ helpers do
 
     @client.filter(track: topics.join(",")) do |object|
       @collection << object.to_h if object.is_a?(Twitter::Tweet)
-      if @collection.length == 1
+      if @collection.length == 5
         return @collection
       end
     end
