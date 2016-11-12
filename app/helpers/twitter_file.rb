@@ -28,3 +28,22 @@ helpers do
   end
   @collection
 end
+def test_method
+  # def twitter_call
+    # word = @word
+    start_client
+    @collection1 = []
+    # topics = ['#{word}']
+    topics = ["movie"]
+    # topics = [word]
+
+    @client.filter(track: topics.join(",")) do |object|
+      @collection1 << object.to_h if object.is_a?(Twitter::Tweet)
+      if @collection1.length == 5
+        return @collection1
+      end
+    end
+
+  end
+  @collection1
+end
