@@ -18,13 +18,13 @@ width:10%
 .tweet-info{
 
     width: 500px;
-    border: 25px #00BFFF;
+    border: 25px solid green;
     padding: 25px;
     margin: 25px;
 }
 
 body {
-  background-color: #6495ED;
+  background-color: #00BFFF;
   /*background-image: url("http://wallpapercave.com/wp/W0FQUvh.jpg")*/
 
 }

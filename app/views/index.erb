@@ -15,21 +15,13 @@
 
 <form id="form-1" method="POST" action="/tweet">
   <input type="hashtag" name="hashtag">
-  <input type="submit" name="submit">
+  <input type="submit" name="submit" value="Search Twitter!!">
 
 
 </form>
 
-  <h2>Live Twitter Feed</h2>
 
-<div class="tweet-info">
- <% twitter_call.each do |tweet| %>
- <%#="******************************************************" %>
-<%= tweet[:text] %>
-<br>
-<%#="*******************************************************" %>
-<% end %>
-</div>
+
 
 <button id="button1"><a href="https://twitter.com/amringrewal"></a>Follow me</button>
 

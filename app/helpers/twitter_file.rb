@@ -9,10 +9,15 @@ helpers do
     @client
   end
 
-  def twitter_call
+  def twitter_call(word)
+  # def twitter_call
+    # word = @word
     start_client
     @collection = []
-    topics = ["hilary"]
+    topics = ['#{word}']
+    # topics = ["Google"]
+    # topics = [word]
+
     @client.filter(track: topics.join(",")) do |object|
       @collection << object.to_h if object.is_a?(Twitter::Tweet)
       if @collection.length == 1
