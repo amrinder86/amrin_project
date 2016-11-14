@@ -14,7 +14,8 @@ helpers do
     # word = @word
     start_client
     @collection = []
-    topics = ['#{word}']
+    topics = ["#{word}"]
+    p topics
     # topics = ["Google"]
     # topics = [word]
 
@@ -26,24 +27,25 @@ helpers do
     end
 
   end
-  @collection
+  p @collection
 end
-def test_method
-  # def twitter_call
-    # word = @word
-    start_client
-    @collection1 = []
-    # topics = ['#{word}']
-    topics = ["movie"]
-    # topics = [word]
+# below method works but shows syntax error, unexpected keyword_end, expecting end-of-input
 
-    @client.filter(track: topics.join(",")) do |object|
-      @collection1 << object.to_h if object.is_a?(Twitter::Tweet)
-      if @collection1.length == 5
-        return @collection1
-      end
-    end
+# def second_twitter_method
 
-  end
-  @collection1
-end
+#     start_client
+#     @collection = []
+
+#     topics = ["trump"]
+#     p topics
+
+#     @client.filter(track: topics.join(",")) do |object|
+#       @collection << object.to_h if object.is_a?(Twitter::Tweet)
+#       if @collection.length == 5
+#         return @collection
+#       end
+#     end
+
+#   end
+#   p @collection
+# end
